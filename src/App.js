@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Frase1 from "./components/Scene";
-import Img2 from "./img/1.jpg";
-import { ImgDiv } from "./components/Styled";
+import { Button } from "./components/Styled";
+import { DesDiv } from "./components/Styled";
 
 function App() {
+  const [isToggled, setIsToggled] = useState(false);
   return (
     <>
-      <ImgDiv
-        style={{backgroundImage: `url(${Img2})`, 
-        }}
-      >
-        <Frase1 />
-      </ImgDiv>
+      {!isToggled && (
+        <DesDiv>
+          <h1>Benvigut!</h1>
+          <p>
+            Participa en aquest tutorial, on mitjançant dos botons podràs
+            avançar i retrocedir en els consells.
+          </p>
+          <Button onClick={() => setIsToggled(!isToggled)}>Començar</Button>
+        </DesDiv>
+      )}
+      {isToggled && <Frase1 />}
     </>
   );
 }

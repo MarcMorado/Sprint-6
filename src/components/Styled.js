@@ -23,7 +23,7 @@ export const Box = styled.div`
     border: 2px solid #1E182B;
     background: white;
     border-radius: 25px;
-    margin:8px 80px 8px 80px;
+    margin:8px 80px 30px 80px;
 `
 export const ButDiv = styled.div`
     display: flex;
@@ -32,6 +32,14 @@ export const ButDiv = styled.div`
     justify-content: center;
     padding: 10px;
 `
+export const DesDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+`
+
 export const ImgDiv = styled.div`
     width: 100%;
     heigth: 100%;
